@@ -1,5 +1,7 @@
 //routes names
 import 'package:aast_books_project/core/resources/app_colors.dart';
+import 'package:aast_books_project/features/auth/login_screen.dart';
+import 'package:aast_books_project/features/home/home_screen.dart';
 import 'package:aast_books_project/features/onboarding/onboarding_screen.dart';
 import 'package:aast_books_project/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,7 @@ class Routes {
   static const String splashRoute = '/';
   static const String homeRoute = '/home';
   static const String onBoardingRoute = '/onboarding';
+  static const String loginRoute = '/login';
 }
 
 class AppRouter {
@@ -22,8 +25,11 @@ class AppRouter {
         return MaterialPageRoute(builder: (context) => SplashScreen());
       case Routes.onBoardingRoute:
         return MaterialPageRoute(builder: (context) => OnboardingScreen());
-      // case Routes.homeRoute:
-      //   return MaterialPageRoute(builder: (context) => HomeScreen(),);
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (context) => HomeScreen(),);
+      case Routes.loginRoute:
+        return MaterialPageRoute(builder: (context) => LoginScreen(),);
+
       default:
         return _undefinedRoute();
     }

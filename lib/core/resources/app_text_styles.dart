@@ -32,4 +32,20 @@ class AppTextStyles {
     fontFamily: fontFamily,
     fontSize: 16,
   );
+  static const TextStyle greyColor16Medium = TextStyle(
+    color: AppColors.greyColor,
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+  static const TextStyle greyColor12Regular = TextStyle(
+    color: AppColors.greyColor,
+    fontWeight: FontWeight.normal,
+    fontSize: 12,
+  );
+  static const TextStyle primaryColor12Medium = TextStyle(
+    color: AppColors.primaryColor,
+    fontWeight: FontWeight.w500,
+    fontSize: 12,
+  );
+
 }
