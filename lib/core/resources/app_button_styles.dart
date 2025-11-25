@@ -12,6 +12,14 @@ class AppButtonStyles {
     elevation: 1,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
   );
+  static final ButtonStyle orderButtonStyle = ElevatedButton.styleFrom(
+    minimumSize: Size.fromHeight(36),
+    backgroundColor: AppColors.primaryColor,
+    foregroundColor: AppColors.whiteColor,
+    maximumSize: Size(double.infinity, 36),
+    elevation: 1,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+  );
 
   static final ButtonStyle secondaryButtonStyle = ElevatedButton.styleFrom(
     minimumSize: Size(double.infinity, 56),

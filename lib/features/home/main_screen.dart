@@ -1,23 +1,29 @@
 import 'package:aast_books_project/core/constants/ui_constants/app_ui_constants.dart';
 import 'package:aast_books_project/core/resources/app_colors.dart';
 import 'package:aast_books_project/core/resources/app_text_styles.dart';
+import 'package:aast_books_project/features/home/widgets/main_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MainScreenState extends State<MainScreen> {
   int pageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(backgroundColor: AppColors.lightGreyFAColor,
+      appBar: MainAppBar(
+        title: AppUiConstants.bottomNavItems[pageIndex].label,
+        haveSearchButton: true,haveNotificationButton: true,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: AppColors.lightGreyFAColor,
         currentIndex: pageIndex,
         onTap: (value) {
           setState(() {
@@ -44,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedLabelStyle: AppTextStyles.greyColor12Regular,
         selectedLabelStyle: AppTextStyles.primaryColor12Medium,
       ),
+      body: AppUiConstants.bottomNavItems[pageIndex].page,
     );
   }
 }

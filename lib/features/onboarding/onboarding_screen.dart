@@ -32,7 +32,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 maintainState: true,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, Routes.homeRoute);
+                    Navigator.pushReplacementNamed(context, Routes.mainRoute);
                   },
                   child: Text(
                     'Skip',
@@ -71,7 +71,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   if(pageIndex<AppUiConstants.onboardingData.length-1) {
                     pageIndex++;
                   }else{
-                    Navigator.pushReplacementNamed(context, Routes.homeRoute);
+                    Navigator.pushReplacementNamed(context, Routes.mainRoute);
                   }
                 });
               },

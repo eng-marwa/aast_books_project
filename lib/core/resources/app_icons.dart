@@ -2,6 +2,7 @@ class AppIcons {
   AppIcons._();
 
   static const String _path = 'assets/icons/';
+  static const String _imagePath = 'assets/images/';
 
   static const String logo = '${_path}logo.svg';
   static const String onboarding1 = '${_path}onboarding1.svg';
@@ -13,4 +14,12 @@ class AppIcons {
   static const String category = '${_path}category.svg';
   static const String cart = '${_path}cart.svg';
   static const String profile = '${_path}profile.svg';
+
+  //appbar icons
+  static const String search = '${_path}search.svg';
+  static const String notification = '${_path}notification.svg';
+  static const String redDot = '${_path}red_dot.svg';
+
+  //for test only
+  static const String ws = '${_imagePath}ws.png';
 }

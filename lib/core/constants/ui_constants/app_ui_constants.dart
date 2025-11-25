@@ -1,4 +1,8 @@
 import 'package:aast_books_project/core/resources/app_icons.dart';
+import 'package:aast_books_project/features/home/screen/cart_screen.dart';
+import 'package:aast_books_project/features/home/screen/category_screen.dart';
+import 'package:aast_books_project/features/home/screen/home_screen.dart';
+import 'package:aast_books_project/features/home/screen/profile_screen.dart';
 import 'package:aast_books_project/features/home/ui_model/nav_item.dart';
 import 'package:aast_books_project/features/onboarding/ui_model/onboarding_data.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,9 +30,9 @@ class AppUiConstants {
   ];
 
   static List<NavItem> bottomNavItems = [
-    NavItem(icon: AppIcons.home, label: 'Home', page: Container()),
-    NavItem(icon: AppIcons.category, label: 'Category', page: Container()),
-    NavItem(icon: AppIcons.cart, label: 'Cart', page: Container()),
-    NavItem(icon: AppIcons.profile, label: 'Profile', page: Container()),
+    NavItem(icon: AppIcons.home, label: 'Home', page: HomeScreen()),
+    NavItem(icon: AppIcons.category, label: 'Category', page: CategoryScreen()),
+    NavItem(icon: AppIcons.cart, label: 'Cart', page: CartScreen()),
+    NavItem(icon: AppIcons.profile, label: 'Profile', page: ProfileScreen()),
   ];
 }

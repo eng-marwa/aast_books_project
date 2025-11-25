@@ -47,5 +47,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
     fontSize: 12,
   );
+  static const TextStyle darkGreyColor14Medium = TextStyle(
+    color: AppColors.darkGreyColor,
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+  );
 
 }
