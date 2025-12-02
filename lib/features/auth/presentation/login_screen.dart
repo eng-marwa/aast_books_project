@@ -1,8 +1,6 @@
 import 'package:aast_books_project/core/common_widgets/app_rich_text.dart';
-import 'package:aast_books_project/core/resources/app_button_styles.dart';
-import 'package:aast_books_project/core/resources/app_text_styles.dart';
-import 'package:aast_books_project/features/auth/widgets/auth_header.dart';
-import 'package:aast_books_project/features/auth/widgets/login_form.dart';
+import 'package:aast_books_project/features/auth/presentation/widgets/auth_header.dart';
+import 'package:aast_books_project/features/auth/presentation/widgets/login_form.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {

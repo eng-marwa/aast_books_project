@@ -1,8 +1,8 @@
 //routes names
 import 'package:aast_books_project/core/resources/app_colors.dart';
-import 'package:aast_books_project/features/auth/login_screen.dart';
+import 'package:aast_books_project/features/auth/presentation/login_screen.dart';
 import 'package:aast_books_project/features/home/main_screen.dart';
-import 'package:aast_books_project/features/onboarding/onboarding_screen.dart';
+import 'package:aast_books_project/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:aast_books_project/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 

@@ -3,8 +3,10 @@ import 'package:aast_books_project/core/resources/app_button_styles.dart';
 import 'package:aast_books_project/core/resources/app_colors.dart';
 import 'package:aast_books_project/core/resources/app_router.dart';
 import 'package:aast_books_project/core/resources/app_text_styles.dart';
-import 'package:aast_books_project/features/onboarding/widgets/onboarding_item.dart';
+import 'package:aast_books_project/core/storage/shared_prefs_helper.dart';
+import 'package:aast_books_project/features/onboarding/presentation/widgets/onboarding_item.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -46,7 +48,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             SizedBox(height: 33),
             SizedBox(
               height: 8,
-              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
                   AppUiConstants.onboardingData.length,
                   (index) => AnimatedContainer(
@@ -66,14 +69,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             SizedBox(height: 33),
             ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  if(pageIndex<AppUiConstants.onboardingData.length-1) {
+              onPressed: () async {
+                if (pageIndex < AppUiConstants.onboardingData.length - 1) {
+                  setState(() {
                     pageIndex++;
-                  }else{
-                    Navigator.pushReplacementNamed(context, Routes.mainRoute);
-                  }
-                });
+                  });
+                } else {
+                  //set shared prefs
+                  SharedPreferences sh = await SharedPreferences.getInstance();
+                  SharedPrefsHelper(sh).setOnboardingCompleted(true);
+                  Navigator.pushReplacementNamed(context, Routes.mainRoute);
+                }
               },
               style: AppButtonStyles.primaryButtonStyle,
               child: Text(

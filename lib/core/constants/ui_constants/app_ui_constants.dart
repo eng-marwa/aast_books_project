@@ -4,9 +4,7 @@ import 'package:aast_books_project/features/home/screen/category_screen.dart';
 import 'package:aast_books_project/features/home/screen/home_screen.dart';
 import 'package:aast_books_project/features/home/screen/profile_screen.dart';
 import 'package:aast_books_project/features/home/ui_model/nav_item.dart';
-import 'package:aast_books_project/features/onboarding/ui_model/onboarding_data.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:aast_books_project/features/onboarding/presentation/ui_model/onboarding_data.dart';
 
 class AppUiConstants {
   AppUiConstants._();

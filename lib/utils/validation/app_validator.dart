@@ -27,4 +27,11 @@ class AppValidator {
     }
     return null;
   }
+
+  static String? validateField(String? label, String? name) {
+    if (name == null || name.isEmpty) {
+      return "${label ?? 'This Field'} is required";
+    }
+    return null;
+  }
 }
